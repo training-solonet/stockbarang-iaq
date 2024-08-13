@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 12, 2024 at 10:27 AM
+-- Generation Time: Aug 13, 2024 at 02:20 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -68,7 +68,8 @@ INSERT INTO `login` (`iduser`, `email`, `password`) VALUES
 (6, 'ifkararfian11@gmail.com', '1234'),
 (8, 'xyuraa11@gmail.com', '1234'),
 (9, 'xyuraa12@gmail.com', '1234'),
-(12, 'yura@gmail.com', '123');
+(12, 'yura@gmail.com', '123'),
+(13, 'admin@gmail.com', '1234');
 
 -- --------------------------------------------------------
 
@@ -92,7 +93,7 @@ INSERT INTO `masuk` (`idmasuk`, `idbarang`, `tanggal`, `penerima`, `qty`) VALUES
 (12, 9, '2024-07-31 07:21:33', 'Depon', 100),
 (16, 2, '2024-08-01 02:49:59', 'Xyuraa', 35),
 (17, 1, '2024-08-01 03:27:43', 'Rasyad', 22),
-(20, 1, '2024-08-01 06:09:13', 'Xyuraa', 10),
+(20, 1, '2024-08-01 06:09:13', 'Xyuraa', 30),
 (21, 3, '2024-08-01 06:17:56', 'Depon', 10),
 (22, 2, '2024-08-01 06:19:18', 'ipkar', 10),
 (23, 9, '2024-08-01 06:20:45', 'Rasyad', 100),
@@ -127,7 +128,8 @@ INSERT INTO `peminjaman` (`idpeminjaman`, `idbarang`, `tanggalpinjam`, `qty`, `p
 (6, 2, '2024-08-09 06:39:21', 10, 'Xyuraa', 'Dipinjam'),
 (7, 9, '2024-08-09 06:39:37', 50, 'Elga', 'Kembali'),
 (8, 1, '2024-08-12 04:54:58', 10, 'Depon', 'Kembali'),
-(9, 9, '2024-08-12 05:01:21', 50, 'Xyuraa', 'Dipinjam');
+(9, 9, '2024-08-12 05:01:21', 50, 'Xyuraa', 'Dipinjam'),
+(10, 1, '2024-08-13 04:31:32', 10, 'Depon', 'Kembali');
 
 -- --------------------------------------------------------
 
@@ -148,7 +150,7 @@ CREATE TABLE `stock` (
 --
 
 INSERT INTO `stock` (`idbarang`, `namabarang`, `deskripsi`, `stock`, `image`) VALUES
-(1, 'Poco X3 Pro', 'Sebuah Handphone Product Xiaomi', 0, '9458f86387ed07022e6fe469846261b7.png'),
+(1, 'Poco X3 Pro', 'Sebuah Handphone Product Xiaomi', 20, '9458f86387ed07022e6fe469846261b7.png'),
 (2, 'Iphone 13 Pro Max', 'Sebuah Handphone', 30, 'bf8558011e663316fc886b3dc7b048af.jpg'),
 (3, 'Nike', 'Sebuah Sepatu', 52, 'e28deb7af13fd0fbb002ab600a8e2a62.jpg'),
 (4, 'Gas LPG 3KG', 'gas buat masak', 35, '047c67b326e5f59df86399870d1f82f8.jpeg'),
@@ -199,31 +201,31 @@ ALTER TABLE `stock`
 -- AUTO_INCREMENT for table `keluar`
 --
 ALTER TABLE `keluar`
-  MODIFY `idkeluar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idkeluar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `masuk`
 --
 ALTER TABLE `masuk`
-  MODIFY `idmasuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `idmasuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `idpeminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idpeminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `stock`
 --
 ALTER TABLE `stock`
-  MODIFY `idbarang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idbarang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
